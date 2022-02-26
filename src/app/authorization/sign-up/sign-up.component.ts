@@ -24,16 +24,21 @@ export class SignUpComponent{
   @Output()
   changeAuth = new EventEmitter()
 
+  // Change sign up on sign in form
   change (event: any): void {
     event.stopPropagation();
     this.changeSign.emit(false)
   }
 
+  // "Sign up" btn work if form is valid 
   changeAuthFunc(event: any) {
-    event.stopPropagation();
-    this.changeAuth.emit(false)
+    if (this.isFormFilled()) {
+      event.stopPropagation();
+      this.changeAuth.emit(false)
+    }
   }
 
+  // Form validation for "Sign up" btn
   isFormFilled(): boolean {
     return Boolean(
       this.user.firstName.length >= 3 &&

@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
+import { Component, Output, EventEmitter, Input } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -17,11 +17,12 @@ export class HeaderComponent {
   @Input()
   loggedIn!: boolean;
 
+  // Hide "Sign in" btn and chenge "Add new ad" btn 
   changeAuth(): void {
     this.changeAuthHidding.emit(true)
-
   }
 
+  // Open menu (as cabinet)
   openCabinetFunc(value: boolean): void {
     this.openCabinet = value
   }

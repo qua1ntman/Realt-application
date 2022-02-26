@@ -52,7 +52,7 @@
         <div *ngIf="password.errors?.['minlength']" class="danger">
             <div>Minimum password length - {{password.errors?.['minlength']}}</div>
         </div>
-        <button class="sign-up-button" (click)="isFormFilled() ? changeAuthFunc($event) : ''">Sign up</button>
+        <button class="sign-up-button" (click)="changeAuthFunc($event)">Sign up</button>
     </form>
 </div>
 

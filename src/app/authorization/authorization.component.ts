@@ -16,14 +16,17 @@ export class AuthorizationComponent {
   @Output()
   logged = new EventEmitter()
 
+  
   changeSignInAndSignUp(value: boolean): void {
     this.isSignIn = value
   }
 
+  // Hide authorization
   changeAuth(value: boolean): void {
     this.changeAuthHidding.emit(value)
   }
 
+  // Hide authorization + change header btns
   personLogged(value: boolean): void {
     this.changeAuth(value)
     this.logged.emit(!value)

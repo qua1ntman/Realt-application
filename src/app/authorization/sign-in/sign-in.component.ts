@@ -21,22 +21,21 @@ export class SignInComponent {
 
   constructor() { }
 
-
+  // Change sign in on sign up form
   change (event: any): void {
     this.changeSign.emit(true)
     event.stopPropagation();
 
   }
-
+  // "Sign in" btn work if form is valid 
   changeAuthFunc(event: any) {
-    this.changeAuth.emit(false)
-    event.stopPropagation();
-    if (this.loggedUser.email && this.loggedUser.password) {
-      console.log(this.loggedUser);
+    if(this.isFormFilled()) {
+      event.stopPropagation();
+      this.changeAuth.emit(false)
     }
-    
   }
-
+  
+  // Form validation for "Sign in" btn
   isFormFilled(): boolean {
     return Boolean(this.loggedUser.email && this.loggedUser.password)
   }

@@ -18,7 +18,7 @@
         <div *ngIf="password.errors?.['required'] && password.touched" class="danger">
             Password name is required
         </div>
-        <button class="sign-in-button" (click)="isFormFilled() ? changeAuthFunc($event) : ''">Sign in</button>
+        <button class="sign-in-button" (click)="changeAuthFunc($event)">Sign in</button>
         <p>or</p>
         <div class="google-in another-in" (click)="changeAuthFunc($event)">Join with Google</div>
         <div class="github-in another-in" (click)="changeAuthFunc($event)">Join with Github</div>

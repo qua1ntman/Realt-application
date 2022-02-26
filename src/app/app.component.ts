@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app-realt';
+  isWantToSignIn: boolean =false
+  loggedIn: boolean = false
+
+  // Show or hide authoriation
+  changeAuthoriationHidding(value: boolean): void {
+    this.isWantToSignIn=value
+  }
+
+  // Hide "Sign in" btn and chenge "Add new ad" btn in header
+  logged(value: boolean): void {
+    this.loggedIn = value
+  }
+
 }
