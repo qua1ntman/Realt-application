@@ -1,0 +1,22 @@
+.table-moderation-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    width: min(1440px, 100vw);
+}
+
+thead {
+    font-weight: bold;
+}
+
+tr {
+    border-bottom: 1px solid rgb(153, 153, 153) ;
+}
+
+th, td {
+    padding: 5px;
+}

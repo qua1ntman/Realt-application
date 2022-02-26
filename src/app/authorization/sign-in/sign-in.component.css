@@ -1,0 +1,92 @@
+input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.sign-in-button {
+    width: 80px;
+    color: rgb(255, 255, 255);
+    border: 2px solid #162D7A;
+    background-color: #2B2D85;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .2s;
+    margin: 15px 0;
+}
+
+.sign-in-button:hover {
+    background-color: #3e40bb;
+}
+
+.danger {
+    background-color: rgb(245, 78, 78);
+    border: 1px solid red;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    opacity: .7;
+    margin: 0 10px;
+}
+
+.sign {
+    background-color: rgb(126, 157, 240);
+    border-radius: 5px;
+    min-width: 270px;
+    padding: 15px;
+}
+
+.input-container {
+    margin: 0 10px;
+    text-align: left;
+}
+
+.or-wrapper {
+    position: relative;
+}
+
+.or-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.or {
+    padding: 0 16px;
+    background: #fff;
+}
+
+.another-in {
+    padding: 10px 50px;
+    margin-bottom: 10px;
+    color: rgb(241, 241, 241);
+    border-radius: 3px;
+}
+
+.google-in {
+    background-color: brown;
+    border: 2px solid rgb(131, 0, 0);
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.google-in:hover {
+    background-color: rgb(102, 28, 28);
+
+}
+
+.github-in {
+    background-color: rgb(78, 78, 78);
+    border: 2px solid rgb(0, 0, 0);
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.github-in:hover {
+    background-color: rgb(46, 45, 45);
+}
+
+.change-sign {
+    text-decoration: underline;
+    color: brown;
+    cursor: pointer;
+}

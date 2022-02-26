@@ -1,0 +1,46 @@
+input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.sign {
+    background-color: rgb(126, 157, 240);
+    border-radius: 5px;
+    min-width: 270px;
+    padding: 15px;
+}
+
+.input-container {
+    margin: 0 10px;
+    text-align: left;
+}
+
+.danger {
+    background-color: rgb(245, 78, 78);
+    border: 1px solid red;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    opacity: .7;
+    margin: 0 10px;
+}
+
+.sign-up-button {
+    width: 80px;
+    color: rgb(255, 255, 255);
+    border: 2px solid #162D7A;
+    background-color: #2B2D85;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .2s;
+    margin: 15px 0;
+}
+
+.sign-up-button:hover {
+    background-color: #3e40bb;
+}
+
+.change-sign {
+    text-decoration: underline;
+    color: brown;
+    cursor: pointer;
+}
