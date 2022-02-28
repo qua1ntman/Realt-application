@@ -13,18 +13,20 @@
     display: flex;
     justify-content: space-around;
 
-    width: 1440px;
-    padding: 15px 0 ;
+    width: 75vw;
+    padding: 1.5vh 0 ;
     border-bottom: 2px solid #162D7A;
 }
 
 .logo-container {
-    height: 50px;
+    height: max(40px, 5vh);
     cursor: pointer;
+    
 }
 
 .logo {
-    height: 50px;
+    border-radius: 5px;
+    height: max(40px, 5vh);
 }
 
 .header-buttons {

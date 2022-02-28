@@ -1,12 +1,17 @@
 .table-moderation-container {
     display: flex;
     justify-content: center;
-    width: 100%;
+    width: min(1440px, 90vw);
+    font-size: max(1vw, 10px);
 }
 
 table {
+    display: flex;
+    flex-direction: column;
+    border: 3px solid rgb(0, 0, 0);
     border-collapse: collapse;
-    width: min(1440px, 100vw);
+    width: min(1440px, 90vw);
+    overflow-x: auto;
 }
 
 thead {
@@ -18,5 +23,16 @@ tr {
 }
 
 th, td {
+    min-width: 14.05vw;
     padding: 5px;
 }
+
+th {
+    border-bottom: 3px solid rgb(0, 0, 0);
+
+}
+
+button {
+    font-size: max(1vw, 12px);
+}
+

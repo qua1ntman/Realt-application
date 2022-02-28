@@ -77,8 +77,8 @@
     bottom: min(100px, 10vh);
     right: min(100px, 12vw);
 
-    height: min(150px, 10vh);
-    width: min(150px, 10vh);
+    height: max(65px, 10vh);
+    width: max(65px, 10vh);
     border: 1px solid #2E5DFA;
     border-radius: 50%;
     background-color: aqua;

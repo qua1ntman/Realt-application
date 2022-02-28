@@ -7,8 +7,8 @@
 
     color: white;
     background-color: #162D7A;
-
-    padding: 10px 0;
+    font-size: max(.8rem, 1vw);
+    padding: 1vh 0;
 }
 
 .footer {
@@ -16,41 +16,31 @@
     justify-content: space-around;
     text-align: center;
 
-    width: 1440px;
+    width: 75vw;
 }
 
 .contact-container {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 60px;
-}
-
-.footer-text {
-
 }
 
 .social-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 60px;
 }
 
 .social-container {
     display: flex;
     justify-content: space-between;
-    min-width: 200px;
+    min-width: max(150px, 10vw);
 }
 
-/* .social-block {
-    height: 40px;
-    width: 40px;
-} */
 
 .social {
-    height:40px;
-    width: 40px;
+    height: max(30px, 4vh);
+    width: max(30px, 4vh);
 
 }
 

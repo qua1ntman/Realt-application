@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Ad } from 'types/ad';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,14 @@ import { Component } from '@angular/core';
 export class AppComponent {
   isWantToSignIn: boolean =false
   loggedIn: boolean = false
+  chosenAd: Ad = {
+    id: 0,
+    pic: '',
+    date: '',
+    title: '',
+    price: 0,
+    location: ''
+  }
 
   // Show or hide authoriation
   changeAuthoriationHidding(value: boolean): void {
