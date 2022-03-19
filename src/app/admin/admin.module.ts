@@ -5,17 +5,8 @@ import { AdminChatForAdminComponent } from './admin-chat-for-admin/admin-chat-fo
 import { AdsModerationComponent } from './ads-moderation/ads-moderation.component';
 import { AdsEditingComponent } from './ads-editing/ads-editing.component';
 
-
-
 @NgModule({
-  declarations: [
-    AdminChatForAdminComponent,
-    AdsModerationComponent,
-    AdsEditingComponent,
-  ],
-  imports: [
-    CommonModule,
-    AdminRoutingModule
-  ]
+  declarations: [AdminChatForAdminComponent, AdsModerationComponent, AdsEditingComponent],
+  imports: [CommonModule, AdminRoutingModule],
 })
-export class AdminModule { }
+export class AdminModule {}

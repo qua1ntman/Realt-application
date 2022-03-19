@@ -7,20 +7,31 @@
 }
 
 .admin-container {
-    width: min(1440px, 100vw);
+    width: min(1440px, 90vw);
 }
 
-a {
+.admin-nav-btn{
     padding: 5px 10px;
-    background-color: cornflowerblue;
-
-    border: 3px solid black;
-    border-radius: 10px;
+    border: 2px solid black;
     text-decoration: none;
+    transition: all .2s;
+    margin: 0 -1px;
+    cursor: pointer;
+    font-size: max(1vw, 15px);
+
+}
+
+.admin-nav-btn:hover {
+    background-color: rgb(166, 192, 240);
+}
+
+.admin-nav-btn-active {
+    background-color: cornflowerblue;
 }
 
 nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     margin: 10px 0 30px;
+    border-collapse: collapse;
 }
