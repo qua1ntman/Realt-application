@@ -1,4 +1,14 @@
-<div (click)="changeAuth(false)" class="auth-container">
-    <app-sign-in appClickStopPropagination (changeAuth)="personLogged($event)" (changeSign)="changeSignInAndSignUp($event)" *ngIf="!isSignIn"></app-sign-in>
-    <app-sign-up appClickStopPropagination (changeAuth)="personLogged($event)" (changeSign)="changeSignInAndSignUp($event)" *ngIf="isSignIn"></app-sign-up>
+<div (click)="changeAuthHidding.emit(false)" class="auth-container">
+    <app-sign-in 
+        appClickStopPropagination 
+        (changeAuth)="personLogged($event)" 
+        (changeSign)="changeSignInAndSignUp($event)" 
+        *ngIf="!isSignIn"
+    ></app-sign-in>
+    <app-sign-up 
+        appClickStopPropagination 
+        (changeAuth)="personLogged($event)" 
+        (changeSign)="changeSignInAndSignUp($event)" 
+        *ngIf="isSignIn"
+    ></app-sign-up>
 </div>

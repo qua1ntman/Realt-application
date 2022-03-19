@@ -1,4 +1,5 @@
 import { Component, Output, EventEmitter, Input } from '@angular/core';
+import { STATIC } from './header.constants';
 
 @Component({
   selector: 'app-header',
@@ -7,25 +8,12 @@ import { Component, Output, EventEmitter, Input } from '@angular/core';
 })
 export class HeaderComponent {
 
-  openCabinet: boolean = false
+  openCabinet = false
+  logo: string = STATIC.logoUrl
 
   @Output()
-  changeAuthHidding = new EventEmitter()
-
-  constructor() { }
+  changeAuthHidding: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   @Input()
   loggedIn!: boolean;
-
-  // Hide "Sign in" btn and chenge "Add new ad" btn 
-  changeAuth(): void {
-    this.changeAuthHidding.emit(true)
-  }
-
-  // Open menu (as cabinet)
-  openCabinetFunc(value: boolean): void {
-    this.openCabinet = value
-  }
-
-
 }
