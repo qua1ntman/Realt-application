@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { AppDataService } from 'src/app/services/app-data.service';
 import { Ad } from 'types/ad';
-import { AppDataService } from './../../services/app-data.service';
 
 @Component({
   selector: 'app-ads-editing',

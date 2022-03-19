@@ -15,5 +15,7 @@ export class AdsModerationComponent {
     this.ads = appDataService.adsData
   }
 
+  trackByFn(index: number, ad: Object) {
+    return index
   }
 }

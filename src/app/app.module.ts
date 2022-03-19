@@ -16,8 +16,6 @@ import { HeaderComponent } from './header/header.component';
 import { AuthorizationComponent } from './authorization/authorization.component';
 import { ClickStopPropaginationDirective } from './directives/stop-propagination/click-stop-propagination.directive';
 import { ChosenAdPageComponent } from './chosen-ad-page/chosen-ad-page.component';
-import { ClientModule } from './client/client.module';
-import { AdminModule } from './admin/admin.module';
 import { AppDataService } from './services/app-data.service';
 import { FooterComponent } from './footer/footer.component';
 import { MainComponent } from './main/main.component';

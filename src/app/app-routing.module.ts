@@ -6,6 +6,7 @@ import { AdminComponent } from './admin/admin.component';
 import { ClientComponent } from './client/client.component';
 import { routes } from './routes';
 import { ChosenAdPageComponent } from './chosen-ad-page/chosen-ad-page.component';
+
 const appRoutes: Routes = [
   { path: '', redirectTo: routes.main.routeMain, pathMatch: 'full' },
   { path: routes.main.routeMain, component: MainComponent },
