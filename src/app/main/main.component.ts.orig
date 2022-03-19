@@ -1,0 +1,45 @@
+import { Component, Output, EventEmitter, OnInit } from '@angular/core';
+import { Ad } from 'types/ad';
+<<<<<<< HEAD
+import { AppDataService } from './../services/app-data.service';
+
+=======
+import { AppDataService } from '../services/app-data.service';
+>>>>>>> feature/1,8,4,31,9,23,15(edited)
+
+@Component({
+  selector: 'app-main',
+  templateUrl: './main.component.html',
+  styleUrls: ['./main.component.css']
+})
+export class MainComponent implements OnInit{
+
+  ads!: Ad[]
+
+<<<<<<< HEAD
+  clickedAd!: boolean
+
+  constructor(private appDataService: AppDataService) { }
+
+  chosenAdFunc(adId: number): void {
+    this.appDataService.chosenAdData(adId)
+    this.clickedAd = true
+  }
+
+  ngOnInit(): void {
+    this.ads = this.appDataService.adsData
+  }
+
+=======
+  //data sample
+  ads: Ad[]
+
+  constructor(private appDataService: AppDataService) {
+    this.ads = appDataService.adsData
+  }
+
+  trackByFn(index: number, ad: Object) {
+    return index
+  }
+>>>>>>> feature/1,8,4,31,9,23,15(edited)
+}

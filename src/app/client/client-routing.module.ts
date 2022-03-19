@@ -1,26 +1,31 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AdminChatComponent } from './admin-chat/admin-chat.component';
-import { ClientPageComponent } from './client-page/client-page.component';
 import { CreateNewAdPageComponent } from './create-new-ad-page/create-new-ad-page.component';
-
+import { ClientComponent } from './client.component';
+import { ClientAdsComponent } from './client-ads/client-ads.component';
+import { EditAdPageComponent } from './edit-ad-page/edit-ad-page.component';
+import { routes } from '../routes';
+import { AdminChatComponent } from './admin-chat/admin-chat.component';
 
 const myAdsRoutes: Routes = [
-  {path: 'published', component: AdminChatComponent},
-  {path: 'penging_review', component: AdminChatComponent},
-  {path: 'refused', component: AdminChatComponent},
-  {path: 'deactivated', component: AdminChatComponent},
+  { path: 'published', component: ClientAdsComponent },
+  { path: 'penging_review', component: ClientAdsComponent },
+  { path: 'refused', component: ClientAdsComponent },
+  { path: 'deactivated', component: ClientAdsComponent },
 ];
 
-const accountRoutes: Routes = [
-  { path: 'create', component: CreateNewAdPageComponent},
-  { path: 'client', redirectTo: '/client/my_page', pathMatch: 'full' },
-  { path: 'client/my_page', component: ClientPageComponent, children: myAdsRoutes },
-  { path: 'client/admin_chat', component: AdminChatComponent },
+const clientPageRoutes: Routes = [
+  { path: '', redirectTo: routes.client.clientChild.myAds, pathMatch: 'full' },
+  { path: routes.client.clientChild.myAds, component: ClientAdsComponent, children: myAdsRoutes },
+  { path: routes.client.clientChild.create, component: CreateNewAdPageComponent },
+  { path: routes.client.clientChild.editPage, component: EditAdPageComponent },
+  { path: routes.client.clientChild.chatWithAdmin, component: AdminChatComponent },
 ];
+
+const accountRoutes: Routes = [{ path: routes.client.client, component: ClientComponent, children: clientPageRoutes }];
 
 @NgModule({
-  imports: [RouterModule.forChild(accountRoutes)],
-  exports: [RouterModule]
+  imports: [RouterModule.forChild(clientPageRoutes)],
+  exports: [RouterModule],
 })
-export class ClientRoutingModule { }
+export class ClientRoutingModule {}

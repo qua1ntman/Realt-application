@@ -1,16 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule }   from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SignUpComponent } from './authorization/sign-up/sign-up.component';
 import { SignInComponent } from './authorization/sign-in/sign-in.component';
 import { AdminComponent } from './admin/admin.component';
-import { AdsModerationComponent } from './admin/ads-moderation/ads-moderation.component';
-import { AdsEditingComponent } from './admin/ads-editing/ads-editing.component';
-import { AppealsComponent } from './admin/appeals/appeals.component';
 import { CabineteComponent } from './client/cabinete/cabinete.component';
 import { EditAdPageComponent } from './client/edit-ad-page/edit-ad-page.component';
 import { CreateNewAdPageComponent } from './client/create-new-ad-page/create-new-ad-page.component';
@@ -24,7 +21,7 @@ import { AdminModule } from './admin/admin.module';
 import { AppDataService } from './services/app-data.service';
 import { FooterComponent } from './footer/footer.component';
 import { MainComponent } from './main/main.component';
-
+import { DemoNgZorroAntdModule } from './ng-zorro-antd.module';
 
 @NgModule({
   declarations: [
@@ -32,9 +29,6 @@ import { MainComponent } from './main/main.component';
     SignUpComponent,
     SignInComponent,
     AdminComponent,
-    AdsModerationComponent,
-    AdsEditingComponent,
-    AppealsComponent,
     CabineteComponent,
     EditAdPageComponent,
     CreateNewAdPageComponent,
@@ -46,15 +40,8 @@ import { MainComponent } from './main/main.component';
     MainComponent,
     ChosenAdPageComponent,
   ],
-  imports: [
-    BrowserModule,
-    ClientModule,
-    FormsModule,
-    HttpClientModule,
-    AppRoutingModule,
-    AdminModule,
-  ],
+  imports: [BrowserModule, FormsModule, HttpClientModule, AppRoutingModule, ReactiveFormsModule, DemoNgZorroAntdModule],
   providers: [AppDataService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

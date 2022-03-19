@@ -5,8 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './create-new-ad-page.component.html',
   styleUrls: ['./create-new-ad-page.component.css']
 })
-export class CreateNewAdPageComponent {
-
-  constructor() { }
-
-}
+export class CreateNewAdPageComponent {}

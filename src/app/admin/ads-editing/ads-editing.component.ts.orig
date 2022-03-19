@@ -1,0 +1,35 @@
+<<<<<<< HEAD
+import { Component, OnInit } from '@angular/core';
+=======
+import { Component } from '@angular/core';
+import { AppDataService } from 'src/app/services/app-data.service';
+>>>>>>> feature/1,8,4,31,9,23,15(edited)
+import { Ad } from 'types/ad';
+import { AppDataService } from './../../services/app-data.service';
+
+@Component({
+  selector: 'app-ads-editing',
+  templateUrl: './ads-editing.component.html',
+  styleUrls: ['./ads-editing.component.css']
+})
+export class AdsEditingComponent implements OnInit{
+
+<<<<<<< HEAD
+  ads!: Ad[]
+
+  constructor(private appDataService: AppDataService) { }
+
+  ngOnInit(): void {
+      this.ads = this.appDataService.adsData
+=======
+  ads: Ad[]
+
+  constructor(private appDataService: AppDataService) {
+    this.ads = appDataService.adsData
+  }
+
+  trackByFn(index: number, ad: Object) {
+    return index
+>>>>>>> feature/1,8,4,31,9,23,15(edited)
+  }
+}

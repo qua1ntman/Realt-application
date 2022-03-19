@@ -1,0 +1,19 @@
+import { Component } from '@angular/core';
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> feature/1,8,4,31,9,23,15(edited)
+@Component({
+  selector: 'app-admin-chat',
+  templateUrl: './admin-chat.component.html',
+  styleUrls: ['./admin-chat.component.css']
+})
+<<<<<<< HEAD
+export class AdminChatComponent {
+
+  constructor() { }
+}
+=======
+export class AdminChatComponent {}
+>>>>>>> feature/1,8,4,31,9,23,15(edited)

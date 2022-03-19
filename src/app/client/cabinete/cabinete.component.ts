@@ -8,12 +8,6 @@ import { Component, EventEmitter, Output } from '@angular/core';
 export class CabineteComponent {
 
   @Output()
-  closeCabinetFunc = new EventEmitter()
-  constructor() { }
+  closeCabinetFunc: EventEmitter<boolean> = new EventEmitter<boolean>();
 
-
-  closeCabinet(value: boolean): void {
-    this.closeCabinetFunc.emit(value)
-  }
-  
 }

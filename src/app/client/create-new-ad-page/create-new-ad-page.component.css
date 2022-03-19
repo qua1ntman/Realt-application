@@ -1,50 +1,49 @@
-.create-new-ad-container {
-    margin: 2vh 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 80vh; 
-    
+nz-select {
+  margin: 0 8px 10px 0;
+  width: 120px;
 }
 
-.page-title {
-    font-size: 2rem;
-    font-weight: bold;
+input {
+  padding: 4px 4px;
+}
+
+.create-new-ad-container {
+  margin: 2vh 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80vh;
 }
 
 #title {
-    width: 100%;
+  width: 100%;
 }
 
 .create-ad-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  min-height: 70vh;
 }
 
 .ad-title-input {
-    width: min(500px, 80vw);
-   
+  width: min(500px, 80vw);
 }
 
 .description-area {
-    max-width: min(500px, 80vw);
-    max-height: min(200px, 10vh);
+  max-width: min(500px, 80vw);
+  max-height: min(200px, 10vh);
 
-    width: min(500px, 80vw);
-    height: min(200px, 10vh);
-    margin: 5px 0;
+  width: min(500px, 80vw);
+  height: min(200px, 10vh);
 }
 
-
-
 .input-container {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
 }
 
 .adress {
@@ -62,31 +61,30 @@
 }
 
 .add-photo-btn {
-    width: 100px;
-    color: rgb(255, 255, 255);
-    border: 2px solid #2c3d74;
-    background-color: #3e3f85;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: all .2s; 
+  width: 100px;
+  color: rgb(255, 255, 255);
+  border: 2px solid #2c3d74;
+  background-color: #3e3f85;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
 }
 
 .add-photo-btn:hover {
-    background-color: #6365bd;
+  background-color: #6365bd;
 }
 
-
 .create-ad-button {
-    padding: 10px 0;
-    max-width: 100px;
-    color: rgb(255, 255, 255);
-    border: 2px solid #162D7A;
-    background-color: #2B2D85;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: all .2s;
+  padding: 10px 0;
+  max-width: 100px;
+  color: rgb(255, 255, 255);
+  border: 2px solid #162d7a;
+  background-color: #2b2d85;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
 }
 
 .create-ad-button:hover {
-    background-color: #3e40bb;
+  background-color: #3e40bb;
 }

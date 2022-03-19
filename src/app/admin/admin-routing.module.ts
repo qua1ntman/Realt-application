@@ -1,24 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AdminComponent } from './admin.component';
+import { EditAdPageComponent } from '../client/edit-ad-page/edit-ad-page.component';
+import { routes } from '../routes';
+import { AdminChatForAdminComponent } from './admin-chat-for-admin/admin-chat-for-admin.component';
 import { AdsEditingComponent } from './ads-editing/ads-editing.component';
 import { AdsModerationComponent } from './ads-moderation/ads-moderation.component';
-import { AppealsComponent } from './appeals/appeals.component';
-
 
 const adminRoutes: Routes = [
-  {path: '', redirectTo: 'moderation', pathMatch: 'full' },
-  {path: 'moderation', component: AdsModerationComponent},
-  {path: 'edit', component: AdsEditingComponent},
-  {path: 'appeals', component: AppealsComponent}
-];
-
-const appRoutes: Routes = [
-  { path: 'admin', component: AdminComponent, children: adminRoutes},
+  { path: '', redirectTo: 'moderation', pathMatch: 'full' },
+  { path: routes.admin.adminChild.moderation, component: AdsModerationComponent },
+  { path: routes.admin.adminChild.edit, component: AdsEditingComponent },
+  { path: routes.admin.adminChild.editPage, component: EditAdPageComponent },
+  { path: routes.admin.adminChild.adminChat, component: AdminChatForAdminComponent },
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(appRoutes)],
-  exports: [RouterModule]
+  imports: [RouterModule.forChild(adminRoutes)],
+  exports: [RouterModule],
 })
-export class AdminRoutingModule { }
+export class AdminRoutingModule {}

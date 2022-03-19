@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { AppDataService } from 'src/app/services/app-data.service';
 import { Ad } from 'types/ad';
 import { AppDataService } from './../../services/app-data.service';
 
@@ -7,13 +8,15 @@ import { AppDataService } from './../../services/app-data.service';
   templateUrl: './ads-editing.component.html',
   styleUrls: ['./ads-editing.component.css']
 })
-export class AdsEditingComponent implements OnInit{
+export class AdsEditingComponent{
 
-  ads!: Ad[]
+  ads: Ad[]
 
-  constructor(private appDataService: AppDataService) { }
+  constructor(private appDataService: AppDataService) {
+    this.ads = appDataService.adsData
+  }
 
-  ngOnInit(): void {
-      this.ads = this.appDataService.adsData
+  trackByFn(index: number, ad: Object) {
+    return index
   }
 }

@@ -1,35 +1,25 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-authorization',
   templateUrl: './authorization.component.html',
-  styleUrls: ['./authorization.component.css']
+  styleUrls: ['./authorization.component.css'],
 })
 export class AuthorizationComponent {
-
-  isSignIn: boolean = true
-  
-  constructor() { }
+  isSignIn: boolean = true;
 
   @Output()
-  changeAuthHidding = new EventEmitter()
+  changeAuthHidding: EventEmitter<boolean> = new EventEmitter<boolean>();
   @Output()
-  logged = new EventEmitter()
+  personLoggedIn: EventEmitter<boolean> = new EventEmitter<boolean>();
 
-  
   changeSignInAndSignUp(value: boolean): void {
-    this.isSignIn = value
-  }
-
-  // Hide authorization
-  changeAuth(value: boolean): void {
-    this.changeAuthHidding.emit(value)
+    this.isSignIn = value;
   }
 
   // Hide authorization + change header btns
   personLogged(value: boolean): void {
-    this.changeAuth(value)
-    this.logged.emit(!value)
+    this.changeAuthHidding.emit(value);
+    this.personLoggedIn.emit(!value);
   }
-
 }

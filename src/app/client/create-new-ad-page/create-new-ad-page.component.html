@@ -3,35 +3,33 @@
     <form class="create-ad-form">
         <div class="ad-title-input input-container">
             <label for="title">Title</label>
-            <input id="title" type="text">
+            <input id="title" type="text" >
         </div>
         <div class="ad-describtion-input input-container">
             <label for="describtion">Describtion</label>
             <textarea class="description-area" name="describtion" id="describtion"></textarea>
         </div>
         <div class="ad-adress-input input-container">
-            <label for="adress">Adress</label>
+            <label for="adress">Address</label>
             <div class="adress" id="adress">
-                <select type="text">
-                    <option>Minsk region</option>
-                    <option>Vitebsk region</option>
-                    <option>Mogilev region</option>
-                    <option>Gomel region</option>
-                    <option>Grodno region</option>
-                    <option>Brest region</option>
-                </select>
-                <select type="text">
-                    <option>Minsk</option>
-                    <option>Molodechno</option>
-                    <option>Logoisk</option>
-                    <option>Soligorsk</option>
-                    <option>Borisov</option>
-                    <option>Volozhin</option>
-                </select>
-                <input type="text" placeholder="Street">
-                <input type="text" placeholder="House">
+                <nz-select ngModel="lucy" nzPlaceHolder="Choose">
+                    <nz-option nzValue="lucy" nzLabel="lucy"></nz-option>
+                    <nz-option nzValue="jack" nzLabel="Jack"></nz-option>
+                    <nz-option nzValue="qwfw" nzLabel="qwfw"></nz-option>
+                    <nz-option nzValue="fq" nzLabel="fq"></nz-option>
+                    <nz-option nzValue="ge" nzLabel="ge"></nz-option>
+                    <nz-option nzValue="2ee" nzLabel="2ee"></nz-option>
+                </nz-select>
+                <nz-select ngModel="lucy" nzAllowClear nzPlaceHolder="Choose">
+                    <nz-option nzValue="lucy" nzLabel="lucy">1</nz-option>
+                    <nz-option nzValue="jack" nzLabel="Jack">2</nz-option>
+                    <nz-option nzValue="jack" nzLabel="Jack">3</nz-option>
+                    <nz-option nzValue="jack" nzLabel="Jack">4</nz-option>
+                    <nz-option nzValue="jack" nzLabel="Jack">5</nz-option>
+                    <nz-option nzValue="jack" nzLabel="Jack">6</nz-option>
+                </nz-select>
+                <input type="text" placeholder="Street" >
             </div>
-
         </div>
         <div class="ad-photo">
             <button class="add-photo-btn">Add photo</button>

@@ -1,0 +1,98 @@
+.header-container {
+  display: flex;
+
+  justify-content: center;
+
+  width: 100%;
+  min-height: 7vh;
+
+  background-color: #2e5dfa;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+
+<<<<<<< HEAD
+    width: 75vw;
+    padding: 1.5vh 0 ;
+    border-bottom: 2px solid #162D7A;
+}
+
+.logo-container {
+    height: max(40px, 5vh);
+    cursor: pointer;
+    
+}
+
+.logo {
+    border-radius: 5px;
+    height: max(40px, 5vh);
+=======
+  width: 75vw;
+  padding: 1.5vh 0;
+  border-bottom: 2px solid #162d7a;
+}
+
+.logo-container {
+  height: max(40px, 5vh);
+  cursor: pointer;
+}
+
+.logo {
+  border-radius: 5px;
+  height: max(40px, 5vh);
+>>>>>>> feature/1,8,4,31,9,23,15(edited)
+}
+
+.header-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 13vw;
+  min-width: 184px;
+  height: 40px;
+}
+
+
+
+.add-new-button {
+  color: rgb(255, 255, 255);
+  border: 2px solid #162d7a;
+  background-color: #2b2d85;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+  padding: 7px;
+
+}
+
+.add-new-button:hover {
+  background-color: #3e40bb;
+}
+
+.sign-in-button {
+  background-color: white;
+  border-radius: 10px;
+  border: 2px solid #162d7a;
+  cursor: pointer;
+  transition: all 0.2s;
+  padding: 7px;
+}
+
+.sign-in-button:hover {
+  background-color: rgb(224, 224, 250);
+}
+
+.cabinet-button {
+  color: white;
+  padding: 10px;
+  border: 2px solid rgb(2, 0, 114);
+  border-radius: 50%;
+  background-color: rgb(89, 29, 255);
+  cursor: pointer;
+}
+
+.cabinet-button:hover {
+  background-color: rgb(129, 85, 252);
+}

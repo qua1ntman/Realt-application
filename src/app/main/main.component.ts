@@ -1,7 +1,6 @@
 import { Component, Output, EventEmitter, OnInit } from '@angular/core';
 import { Ad } from 'types/ad';
-import { AppDataService } from './../services/app-data.service';
-
+import { AppDataService } from '../services/app-data.service';
 
 @Component({
   selector: 'app-main',
@@ -10,19 +9,14 @@ import { AppDataService } from './../services/app-data.service';
 })
 export class MainComponent implements OnInit{
 
-  ads!: Ad[]
+  //data sample
+  ads: Ad[]
 
-  clickedAd!: boolean
-
-  constructor(private appDataService: AppDataService) { }
-
-  chosenAdFunc(adId: number): void {
-    this.appDataService.chosenAdData(adId)
-    this.clickedAd = true
+  constructor(private appDataService: AppDataService) {
+    this.ads = appDataService.adsData
   }
 
-  ngOnInit(): void {
-    this.ads = this.appDataService.adsData
+  trackByFn(index: number, ad: Object) {
+    return index
   }
-
 }
