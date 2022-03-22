@@ -1,0 +1,79 @@
+.header-container {
+    display: flex;
+
+    justify-content: center;
+
+    width: 100%;
+    min-height: 7vh;
+
+    background-color: #2E5DFA;
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+
+    width: 1440px;
+    padding: 15px 0 ;
+    border-bottom: 2px solid #162D7A;
+}
+
+.logo-container {
+    height: 50px;
+    cursor: pointer;
+}
+
+.logo {
+    height: 50px;
+}
+
+.header-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 180px;
+    height: 40px;
+}
+
+.add-new-button {
+    color: rgb(255, 255, 255);
+    border: 2px solid #162D7A;
+    background-color: #2B2D85;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .2s;
+    padding: 7px;
+    
+}
+
+.add-new-button:hover {
+    background-color: #3e40bb;
+}
+
+.sign-in-button {
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #162D7A;
+    cursor: pointer;
+    transition: all .2s;
+    padding: 7px;
+    
+}
+
+.sign-in-button:hover {
+    background-color: rgb(224, 224, 250);
+}
+
+.cabinet-button {
+    color: white;
+    padding: 10px;
+    border: 2px solid rgb(2, 0, 114);
+    border-radius: 50%;
+    background-color: rgb(89, 29, 255);
+    cursor: pointer;
+
+}
+
+.cabinet-button:hover {
+    background-color: rgb(129, 85, 252);
+}

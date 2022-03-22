@@ -1,0 +1,75 @@
+.footer-container {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 7vh;
+
+    color: white;
+    background-color: #162D7A;
+
+    padding: 10px 0;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+
+    width: 1440px;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 60px;
+}
+
+.footer-text {
+
+}
+
+.social-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 60px;
+}
+
+.social-container {
+    display: flex;
+    justify-content: space-between;
+    min-width: 200px;
+}
+
+/* .social-block {
+    height: 40px;
+    width: 40px;
+} */
+
+.social {
+    height:40px;
+    width: 40px;
+
+}
+
+.instagram {
+    background: url(../../app/pngs/instagram.png) no-repeat center;
+    background-size: 100%;
+}
+
+.facebook {
+    background: url(../../app/pngs/facebook.png) no-repeat center;
+    background-size: 100%;
+}
+
+.telegram {
+    background: url(../../app/pngs/telegram.png) no-repeat center;
+    background-size: 100%;
+}
+
+.vk {
+    background: url(../../app/pngs/vk.png) no-repeat center;
+    background-size: 100%;
+}

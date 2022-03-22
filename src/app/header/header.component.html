@@ -1,0 +1,15 @@
+<header class="header-container">
+    <div class="header">
+        <!-- Just random logo -->
+        <div class="logo-container" routerLink="/ads">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0kJ1egqdu7Z3-HEJZxg6rdtotw3_qktoYzg&usqp=CAU" class="logo">
+        </div>
+        <div class="header-buttons">
+            <button *ngIf="loggedIn" class="add-new-button" routerLink="create">+ Add new ad</button>
+            <button *ngIf="!loggedIn" class="add-new-button" (click)="changeAuth()">+ Add new ad</button>
+            <button *ngIf="!loggedIn" class="sign-in-button" (click)="changeAuth()">Sign in</button>
+            <div *ngIf="loggedIn" class="cabinet-button" (click)="openCabinetFunc(true)">M</div>
+        </div>
+    </div>
+</header>
+<app-cabinete *ngIf="openCabinet" (closeCabinetFunc)="openCabinetFunc(false)"></app-cabinete>

@@ -1,0 +1,26 @@
+<div class="sign" >
+    <h1>Sign in</h1>
+    <p>or you can <span class="change-sign" (click)="change($event)">Sign up</span></p>
+    <form>
+        <div class="input-container">
+            <label for="email">Email</label>
+            <input id="email" #email="ngModel" name="email" type="text"  [(ngModel)]="loggedUser.email" required>
+        </div>
+        <br *ngIf="!email.errors?.['required'] || email.untouched">
+        <div *ngIf="email.errors?.['required'] && email.touched" class="danger">
+            Email name is required
+        </div>
+        <div class="input-container">
+            <label for="password">Password</label>
+            <input id="password" #password="ngModel" name="password" type="password"  [(ngModel)]="loggedUser.password" required>
+        </div>
+        <br *ngIf="!password.errors?.['required'] || password.untouched">
+        <div *ngIf="password.errors?.['required'] && password.touched" class="danger">
+            Password name is required
+        </div>
+        <button class="sign-in-button" (click)="changeAuthFunc($event)">Sign in</button>
+        <p>or</p>
+        <div class="google-in another-in" (click)="changeAuthFunc($event)">Join with Google</div>
+        <div class="github-in another-in" (click)="changeAuthFunc($event)">Join with Github</div>
+    </form>
+</div>
