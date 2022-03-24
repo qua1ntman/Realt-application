@@ -1,0 +1,33 @@
+.app-wrapper {
+<<<<<<< HEAD
+    display: flex;
+    flex-direction: column;
+=======
+  display: flex;
+  flex-direction: column;
+>>>>>>> feature/1,8,4,31,9,23,15(edited)
+}
+
+.container {
+  flex: 1 0 auto;
+
+<<<<<<< HEAD
+    display: flex;
+
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 100vw;
+    min-width: 300px;
+    min-height: 84vh;
+}
+=======
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  min-width: 300px;
+  min-height: 84vh;
+}
+>>>>>>> feature/1,8,4,31,9,23,15(edited)

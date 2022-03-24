@@ -1,0 +1,19 @@
+<div class="ads-container">
+<<<<<<< HEAD
+    <div  *ngFor="let ad of ads" class="ad" (click)="chosenAdFunc(ad.id)" routerLink="/chosen_ad">
+        <div class="ad-picture" [style.background-color]="ad.pic" ></div>
+=======
+    <div *ngFor="let ad of ads; trackBy: trackByFn" class="ad">
+        <img class="ad-picture" [src]="ad.pic" width="100%" height="auto">
+>>>>>>> feature/1,8,4,31,9,23,15(edited)
+        <div class="ad-date">{{ad.date}}</div>
+        <div class="ad-information">
+            <div class="ad-title-div">{{ad.title}}</div>
+            <div class="ad-cost-div">{{ad.price}}$</div>
+            <div class="ad-location-div">{{ad.location}}</div>
+        </div>
+    </div>
+    <div routerLink="/map" class="minimap">
+        Watch on map
+    </div>
+</div>

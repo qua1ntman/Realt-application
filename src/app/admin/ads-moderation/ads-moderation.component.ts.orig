@@ -1,0 +1,37 @@
+import { Component } from '@angular/core';
+import { Ad } from 'types/ad';
+<<<<<<< HEAD
+import { AppDataService } from './../../services/app-data.service';
+=======
+import { AppDataService } from 'src/app/services/app-data.service';
+>>>>>>> feature/1,8,4,31,9,23,15(edited)
+
+@Component({
+  selector: 'app-ads-moderation',
+  templateUrl: './ads-moderation.component.html',
+  styleUrls: ['./ads-moderation.component.css']
+})
+<<<<<<< HEAD
+export class AdsModerationComponent implements OnInit{
+
+  ads!: Ad[]
+
+  constructor(private appDataService: AppDataService) { }
+
+  ngOnInit(): void {
+      this.ads = this.appDataService.adsData
+  }
+=======
+export class AdsModerationComponent {
+
+  ads: Ad[]
+
+  constructor(private appDataService: AppDataService) {
+    this.ads = appDataService.adsData
+  }
+
+  trackByFn(index: number, ad: Object) {
+    return index
+  }
+>>>>>>> feature/1,8,4,31,9,23,15(edited)
+}

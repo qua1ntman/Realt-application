@@ -1,0 +1,116 @@
+nz-select {
+  margin: 0 8px 10px 0;
+  width: 120px;
+}
+
+input {
+  padding: 4px 4px;
+}
+
+.create-new-ad-container {
+<<<<<<< HEAD
+    margin: 2vh 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80vh; 
+    
+}
+
+.page-title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+=======
+  margin: 2vh 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80vh;
+}
+
+>>>>>>> feature/1,8,4,31,9,23,15(edited)
+#title {
+  width: 100%;
+}
+
+.create-ad-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  min-height: 70vh;
+}
+
+.ad-title-input {
+  width: min(500px, 80vw);
+}
+
+.description-area {
+  max-width: min(500px, 80vw);
+  max-height: min(200px, 10vh);
+
+<<<<<<< HEAD
+    width: min(500px, 80vw);
+    height: min(200px, 10vh);
+    margin: 5px 0;
+=======
+  width: min(500px, 80vw);
+  height: min(200px, 10vh);
+>>>>>>> feature/1,8,4,31,9,23,15(edited)
+}
+
+
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.adress {
+    display: grid;
+    -ms-grid-row-align: center;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    width: 100%;
+}
+
+.adress > select,input {
+    box-sizing: border-box;
+    width: min(240px, 80vw);
+    padding: 5px;
+    margin: 5px 0;
+}
+
+.add-photo-btn {
+  width: 100px;
+  color: rgb(255, 255, 255);
+  border: 2px solid #2c3d74;
+  background-color: #3e3f85;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.add-photo-btn:hover {
+  background-color: #6365bd;
+}
+
+.create-ad-button {
+  padding: 10px 0;
+  max-width: 100px;
+  color: rgb(255, 255, 255);
+  border: 2px solid #162d7a;
+  background-color: #2b2d85;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.create-ad-button:hover {
+  background-color: #3e40bb;
+}

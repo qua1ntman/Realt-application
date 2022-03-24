@@ -1,97 +1,93 @@
 .ads-container {
-    display: grid;
-    -ms-grid-row-align: center;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    object-fit: cover;
-    width: 75vw;
-    padding: 5vh 0;
-} 
+  display: grid;
+  -ms-grid-row-align: center;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  object-fit: cover;
+  width: 75vw;
+  padding: 5vh 0;
+}
 
 .ad {
-    position: relative;
-    align-self: center;
-    justify-self: center;
+  position: relative;
+  align-self: center;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  transition: all 0.3s;
+  margin: 20px 0;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    width: 300px;
-    height: 300px;
-    transition: all .3s;
-    margin: 20px 0;
+  box-shadow: 5px 10px 20px rgba(50, 56, 173, 0.05), 0 10px 10px rgba(50, 56, 173, 0.05);
 
-    box-shadow: 5px 10px 20px rgba(50, 56, 173, 0.05), 0 10px 10px rgba(50, 56, 173, 0.05);
-
-    border-radius: 10px;
-    cursor: pointer;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 .ad:hover {
-    box-shadow: 5px 10px 20px rgba(50, 56, 173, 0.25), 0 10px 10px rgba(50, 56, 173, 0.22);
+  box-shadow: 5px 10px 20px rgba(50, 56, 173, 0.25), 0 10px 10px rgba(50, 56, 173, 0.22);
 }
 
 .ad-picture {
-    margin-top: 10px;
-    height: 180px;
-    width: 270px;
+  margin-top: 10px;
+  height: 180px;
+  width: 270px;
 }
 
 .ad-date {
-    position: absolute;
-    top: 35px;
-    right: 20px;
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 5px;
-    padding: 2px;
+  position: absolute;
+  top: 35px;
+  right: 20px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  padding: 2px;
 }
 
 .ad-information {
-    display: grid;
-    grid-template-areas: 
-        "title price"
-        "location location";
-    width: 270px;
-    height: 60px;    
+  display: grid;
+  grid-template-areas:
+    'title price'
+    'location location';
+  width: 270px;
+  height: 60px;
 }
 
 .ad-title-div {
-    font-weight: bold;
-    grid-area: title;
+  font-weight: bold;
+  grid-area: title;
 }
 
 .ad-cost-div {
-    grid-area: price;
-    color: rgb(37, 201, 37);
-
-}   
+  grid-area: price;
+  color: rgb(37, 201, 37);
+}
 
 .ad-location-div {
-    grid-area: location;
-    color: gray;
+  grid-area: location;
+  color: gray;
 }
 
 .minimap {
-    position: fixed;
+  position: fixed;
 
-    bottom: min(100px, 10vh);
-    right: min(100px, 12vw);
+  bottom: min(100px, 10vh);
+  right: min(100px, 12vw);
 
-    height: min(150px, 10vh);
-    width: min(150px, 10vh);
-    border: 1px solid #2E5DFA;
-    border-radius: 50%;
-    background-color: aqua;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    transition: all .2s;
-
-    cursor: pointer;
+  height: min(150px, 10vh);
+  width: min(150px, 10vh);
+  border: 1px solid #2e5dfa;
+  border-radius: 50%;
+  background-color: aqua;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: all 0.2s;
+  cursor: pointer;
 }
 
 .minimap:hover {
-    background-color: rgb(4, 185, 185);
-
+  background-color: rgb(4, 185, 185);
 }

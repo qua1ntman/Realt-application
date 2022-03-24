@@ -1,0 +1,17 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-footer',
+  templateUrl: './footer.component.html',
+  styleUrls: ['./footer.component.css']
+})
+<<<<<<< HEAD
+export class FooterComponent {
+
+  constructor() { }
+
+
+}
+=======
+export class FooterComponent {}
+>>>>>>> feature/1,8,4,31,9,23,15(edited)

@@ -6,18 +6,16 @@
                 <th>City</th>
                 <th>Date</th>
                 <th>Price</th>
-                <!-- <th></th> -->
                 <th></th>
                 <th></th>
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let ad of ads">
+            <tr *ngFor="let ad of ads; trackBy: trackByFn">
                 <td>{{ad.title}}</td>
                 <td>{{ad.location}}</td>
                 <td>{{ad.date}}</td>
                 <td>{{ad.price}} $</td>
-                <!-- <td><button>Edit</button></td> -->
                 <td><button>Publish</button></td>
                 <td><button>Refusal</button></td>
             </tr>

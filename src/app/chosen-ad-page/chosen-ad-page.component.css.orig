@@ -1,0 +1,87 @@
+.chosen-ad-container {
+<<<<<<< HEAD
+    position: relative;
+
+    width: 75vw;
+    min-height: 84vh;
+    padding: 5vh 0;
+
+=======
+    width: 75vw;
+    min-height: 84vh;
+    padding: 5vh 0;
+>>>>>>> feature/1,8,4,31,9,23,15(edited)
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+<<<<<<< HEAD
+
+.chosen-ad-pic {
+    min-width: max(75vw, 400px);
+    min-height: max(60vh, 250px);
+    /* background-color: crimson; */
+=======
+.pic-date-container {
+    position: relative;
+}
+
+.ad-picture {
+    width: max(60vw, 400px);
+    min-height: auto;
+>>>>>>> feature/1,8,4,31,9,23,15(edited)
+    border-radius: 30px;
+}
+
+.chosen-ad-title {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 2rem;
+}
+
+.chosen-ad-price {
+<<<<<<< HEAD
+    
+=======
+>>>>>>> feature/1,8,4,31,9,23,15(edited)
+    padding: 10px;
+    border-radius: 10px;
+    color: rgb(11, 224, 4);
+    font-size: 1.6rem;
+}
+
+.chosen-ad-date {
+    position: absolute;
+<<<<<<< HEAD
+    top: 12vh;
+    right: 3vw;
+    background-color: rgba(255, 255, 255, .3);
+    padding: 10px;
+    font-size: 1.2rem;
+
+    border-radius: 10px;
+
+}
+
+.chosen-ad-description {
+    width: 60vw;
+    margin-top: 20px;
+}
+=======
+    top: 3vh;
+    right: 3vw;
+    background-color: rgba(255, 255, 255, .6);
+    padding: 10px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+}
+
+.chosen-ad-description {
+    text-align: left;
+    width: 60vw;
+    margin-top: 20px;
+}
+>>>>>>> feature/1,8,4,31,9,23,15(edited)

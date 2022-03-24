@@ -1,0 +1,11 @@
+<div class="ads-container">
+    <div *ngFor="let ad of ads" class="ad">
+        <div class="ad-picture" [style.background-color]="ad.pic" ></div>
+        <div class="ad-date">{{ad.date}}</div>
+        <div class="ad-information">
+            <div class="ad-title">{{ad.title}}</div>
+            <div class="ad-cost">{{ad.price}}</div>
+            <div class="ad-location">{{ad.location}}</div>
+        </div>
+    </div>
+</div>

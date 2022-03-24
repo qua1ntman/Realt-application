@@ -1,22 +1,22 @@
 <div class="sign" >
     <h1>Sign in</h1>
-    <p>or you can <span class="change-sign" (click)="change($event)">Sign up</span></p>
-    <form>
+    <p>or you can <span class="change-sign" (click)="changeSignUpOnSignInForm($event)">Sign up</span></p>
+    <form [formGroup]="signin">
         <div class="input-container">
             <label for="email">Email</label>
-            <input id="email" #email="ngModel" name="email" type="text"  [(ngModel)]="loggedUser.email" required>
+            <input id="email" formControlName="email" type="email" required>
         </div>
-        <br *ngIf="!email.errors?.['required'] || email.untouched">
-        <div *ngIf="email.errors?.['required'] && email.touched" class="danger">
-            Email name is required
+        <br *ngIf="isEmailCorrect() || this.signin.get('email')!.untouched">
+        <div *ngIf="!isEmailCorrect() && this.signin.get('email')!.touched" class="danger">
+            Input email
         </div>
         <div class="input-container">
             <label for="password">Password</label>
-            <input id="password" #password="ngModel" name="password" type="password"  [(ngModel)]="loggedUser.password" required>
+            <input id="password" formControlName="password" type="password" required>
         </div>
-        <br *ngIf="!password.errors?.['required'] || password.untouched">
-        <div *ngIf="password.errors?.['required'] && password.touched" class="danger">
-            Password name is required
+        <br *ngIf="isPasswordCorrect() || this.signin.get('password')!.untouched">
+        <div *ngIf="!isPasswordCorrect() && this.signin.get('password')!.touched" class="danger">
+            Password length must be 8 or more {{this.signin.get('password')!.value}}
         </div>
         <button class="sign-in-button" (click)="changeAuthFunc($event)">Sign in</button>
         <p>or</p>

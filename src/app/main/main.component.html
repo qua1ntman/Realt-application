@@ -1,6 +1,6 @@
 <div class="ads-container">
-    <div *ngFor="let ad of ads" class="ad">
-        <div class="ad-picture" [style.background-color]="ad.pic" ></div>
+    <div *ngFor="let ad of ads; trackBy: trackByFn" class="ad">
+        <img class="ad-picture" [src]="ad.pic" width="100%" height="auto">
         <div class="ad-date">{{ad.date}}</div>
         <div class="ad-information">
             <div class="ad-title-div">{{ad.title}}</div>
