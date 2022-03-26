@@ -1,9 +1,8 @@
 <div class="app-wrapper">
-  <app-authorization (logged)="logged($event)" (changeAuthHidding)="changeAuthoriationHidding($event)" *ngIf="isWantToSignIn"></app-authorization>
+  <app-authorization (logged)="personLoggedIn($event)" (changeAuthHidding)="changeAuthoriationHidding($event)" *ngIf="isWantToSignIn"></app-authorization>
   <app-header [loggedIn]="loggedIn" (changeAuthHidding)="changeAuthoriationHidding($event)"></app-header>
   <div class="container">
     <router-outlet></router-outlet>
   </div>
   <app-footer></app-footer>
 </div>
-
