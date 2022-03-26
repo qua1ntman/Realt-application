@@ -1,0 +1,16 @@
+<div class="client-page-container">
+    <div class="client-btns-container">
+        <div *ngFor="let chat of chats" routerLink="/chat" class="cabinet-btn" routerLinkActive="cabinet-btn-active"><div>{{chat}}</div></div>
+    </div>
+    <div class="client-content">
+        <div class="chat-space">
+            <div class="messages-container">
+                <div class="message"></div>
+            </div>
+        </div>
+        <div class="chat-input-container">
+            <input type="text" id="chat-input" placeholder="Write message">
+            <button>Send</button>
+        </div>        
+    </div>
+</div>

@@ -6,22 +6,29 @@
     height: 80vh;    
 }
 
-.admin-container {
-    width: min(1440px, 100vw);
+
+.admin-nav-btn{
+    padding: 5px 10px;
+    border: 2px solid black;
+    text-decoration: none;
+    transition: all .2s;
+    margin: 0 -1px;
+    cursor: pointer;
+    font-size: max(1vw, 15px);
+
 }
 
-a {
-    padding: 5px 10px;
-    background-color: cornflowerblue;
+.admin-nav-btn:hover {
+    background-color: rgb(166, 192, 240);
+}
 
-    border: 3px solid black;
-    border-radius: 10px;
-    text-decoration: none;
+.admin-nav-btn-active {
+    background-color: cornflowerblue;
 }
 
 nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     margin: 10px 0 30px;
+    border-collapse: collapse;
 }
-

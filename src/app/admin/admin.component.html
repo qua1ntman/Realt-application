@@ -1,10 +1,12 @@
 <div class="admin-wrapper">
     <div class="admin-container">
         <nav>
-            <div><a routerLink="/admin/moderation">moderation</a></div>
-            <div><a routerLink="/admin/edit">edit</a></div>
-            <div><a routerLink="/admin/appeals">appeals</a></div>
+            <div class="admin-nav-btn" routerLink="/admin/moderation" routerLinkActive="admin-nav-btn-active">Moderation</div>
+            <div class="admin-nav-btn" routerLink="/admin/edit" routerLinkActive="admin-nav-btn-active">Edit</div>
+            <div class="admin-nav-btn" routerLink="/admin/admin_chat" routerLinkActive="admin-nav-btn-active">Chat</div>
         </nav>
-        <router-outlet></router-outlet>
+        <div class="">
+            <router-outlet></router-outlet>
+        </div>
     </div>
 </div>
