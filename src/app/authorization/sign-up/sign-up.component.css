@@ -24,6 +24,15 @@ input {
     margin: 0 10px;
 }
 
+.danger {
+    background-color: rgb(245, 78, 78);
+    border: 1px solid red;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    opacity: .7;
+    margin: 0 10px;
+}
+
 .sign-up-button {
     width: 80px;
     color: rgb(255, 255, 255);

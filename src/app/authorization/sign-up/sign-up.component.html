@@ -1,59 +1,47 @@
 <div class="sign" >
     <h1>Sign up</h1>
     <p>or you can <span class="change-sign" (click)="change($event)">Sign in</span></p>
-    <form>
+    <form [formGroup]="signup">
         <div class="input-container">
             <label for="firstname" >First name</label>
-            <input id="firstname" #firstname="ngModel" name="firstName" [(ngModel)]="user.firstName" minlength="3" type="text" required>
+            <input id="firstname" formControlName="firstName" type="text" required>
         </div>
-        <br *ngIf="!firstname.errors?.['minlength'] && !(firstname.errors?.['required'] && firstname.touched)">
-        <div *ngIf="firstname.errors?.['required']  && firstname.touched" class="danger">
-            First name is required
-        </div>
-        <div *ngIf="firstname.errors?.['minlength']" class="danger">
-            Minimum name length - {{firstname.errors?.['minlength']}}
+        <br *ngIf="signup.get('firstName')!.valid || signup.get('firstName')!.untouched">
+        <div *ngIf="signup.get('firstName')!.invalid && signup.get('firstName')!.touched" class="danger">
+            Enter your first name
         </div>
         <div class="input-container">
             <label for="lastname">Last name</label>
-            <input id="lastname" #lastname="ngModel" name="lastName" [(ngModel)]="user.lastName" minlength="3" type="text" required>
+            <input id="lastname" formControlName="lastName"  type="text" required>
         </div>
-        <br *ngIf="!lastname?.errors?.['minlength'] && !(lastname.errors?.['required'] && lastname.touched)" >
-        <div *ngIf="lastname.errors?.['required'] && lastname.touched" class="danger">
-            Last name is required
-        </div>
-        <div *ngIf="lastname?.errors?.['minlength']" class="danger">
-            <div> Minimum name length - {{lastname.errors?.['minlength']}}</div>
+        <br *ngIf="signup.get('lastName')!.valid || signup.get('lastName')!.untouched" >
+        <div *ngIf="signup.get('lastName')!.invalid && signup.get('lastName')!.touched" class="danger">
+            Enter your last name 
         </div>
         <div class="input-container">
             <label for="email">Email</label>
-            <input id="email" #email="ngModel" name="email" [(ngModel)]="user.email" type="text"
-                required pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$"
-            >
+            <input id="email" formControlName="email" type="text" required>
         </div>
-        <br *ngIf="email.valid || email.untouched">
-        <div *ngIf="email.invalid && email.touched" class="danger">
+        <br *ngIf="signup.get('email')!.valid || signup.get('email')!.untouched">
+        <div *ngIf="signup.get('email')!.invalid && signup.get('email')!.touched" class="danger">
             <div>Incorrect email</div>
         </div>
         <div class="input-container">
             <label for="phone">Phone number</label>
-            <input id="phone"  #phone="ngModel" name="phone" [(ngModel)]="user.phone" 
-                type="text" required  pattern="[0-9]{10}"
-            >
+            <input id="phone" formControlName="phone" type="text" required>
         </div>
-        <br *ngIf="phone.valid || phone.untouched">
-        <div *ngIf="phone.invalid && phone.touched" class="danger">
+        <br *ngIf="signup.get('phone')!.valid || signup.get('phone')!.untouched">
+        <div *ngIf="signup.get('phone')!.invalid && signup.get('phone')!.touched" class="danger">
             <div>Incorrect number</div>
         </div>
         <div class="input-container">
             <label for="password">Password</label>
-            <input id="password" #password="ngModel" name="password" [(ngModel)]="user.password" type="password" minlength="8" required>
+            <input id="password" formControlName="password" type="password" required>
         </div>
-        <br *ngIf="!password.errors?.['minlength']">
-        <div *ngIf="password.errors?.['minlength']" class="danger">
-            <div>Minimum password length - {{password.errors?.['minlength']}}</div>
+        <br *ngIf="signup.get('password')!.valid || signup.get('password')!.untouched">
+        <div *ngIf="signup.get('password')!.invalid && signup.get('password')!.touched" class="danger">
+            <div>Minimum password length - 8</div>
         </div>
         <button class="sign-up-button" (click)="changeAuthFunc($event)">Sign up</button>
     </form>
 </div>
-
-
