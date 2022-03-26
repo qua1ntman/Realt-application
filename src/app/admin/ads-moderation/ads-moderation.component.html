@@ -12,7 +12,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let ad of ads">
+            <tr *ngFor="let ad of ads; trackBy: trackByFn">
                 <td>{{ad.title}}</td>
                 <td>{{ad.location}}</td>
                 <td>{{ad.date}}</td>

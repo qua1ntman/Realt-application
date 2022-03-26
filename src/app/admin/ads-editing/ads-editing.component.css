@@ -1,12 +1,12 @@
 .table-moderation-container {
     display: flex;
     justify-content: center;
-    width: 100%;
+    /* width: 75vw; */
 }
 
 table {
     border-collapse: collapse;
-    width: min(1440px, 100vw);
+    width: min(1440px, 75vw);
 }
 
 thead {
@@ -19,4 +19,8 @@ tr {
 
 th, td {
     padding: 5px;
+}
+
+.tr-edit:hover {
+    background-color: rgb(210, 224, 255);
 }
