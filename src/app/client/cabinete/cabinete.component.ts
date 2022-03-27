@@ -9,11 +9,8 @@ export class CabineteComponent {
 
   @Output()
   closeCabinetFunc = new EventEmitter()
-  constructor() { }
-
 
   closeCabinet(value: boolean): void {
     this.closeCabinetFunc.emit(value)
   }
-  
 }
