@@ -1,0 +1,26 @@
+.client-ads-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 60vw;
+    /* height: 82vh;
+    overflow-y: auto;
+    overflow-x: hidden; */
+}
+
+.each-ad {
+    width: 60vw;
+    display: flex;
+    justify-content: space-around;
+    padding: 1vh 0;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.each-ad:hover {
+    background-color: rgb(210, 224, 255);
+}
+
+.client-ad-title {
+    font-weight: bold;
+}

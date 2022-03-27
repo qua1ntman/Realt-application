@@ -1,0 +1,7 @@
+<div class="client-ads-container">
+    <div *ngFor="let ad of ads" class="each-ad" [routerLink]="['/client/edit', ad.id]" (click)="editChosenAd(ad)">
+        <div class="client-ad-title">{{ad.title}}</div>
+        <div class="client-ad-date">{{ad.date}}</div>
+        <div class="client-ad-title">{{ad.price  | currency: 'USD'}}</div>
+    </div>
+</div>
