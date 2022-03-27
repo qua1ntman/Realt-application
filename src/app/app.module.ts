@@ -1,3 +1,4 @@
+/* eslint-disable sort-imports */
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
@@ -18,8 +19,9 @@ import { ClickStopPropaginationDirective } from './directives/stop-propagination
 import { ChosenAdPageComponent } from './chosen-ad-page/chosen-ad-page.component';
 import { AppDataService } from './services/app-data.service';
 import { FooterComponent } from './footer/footer.component';
-import { MainComponent } from './main/main.component';
+
 import { NzSelectModule } from 'ng-zorro-antd/select';
+import { MainComponent } from './main/main.component';
 
 @NgModule({
   declarations: [

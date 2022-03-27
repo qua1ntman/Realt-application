@@ -1,30 +1,31 @@
-import { Component, Output, EventEmitter, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { routes } from './../routes';
+import { AppDataService } from './../services/app-data.service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
-
-  openCabinet: boolean = false
+  router = routes;
+  openCabinet = false;
+  // loggedIn = this.appDataService.isUserLoggged;
 
   @Output()
-  changeAuthHidding = new EventEmitter()
-
-  constructor() { }
-
+  changeAuthHidding = new EventEmitter();
   @Input()
   loggedIn!: boolean;
 
-  // Hide "Sign in" btn and chenge "Add new ad" btn 
+  constructor(private appDataService: AppDataService) {}
+
+  // Hide "Sign in" btn and chenge "Add new ad" btn
   changeAuth(): void {
-    this.changeAuthHidding.emit(true)
+    this.changeAuthHidding.emit(true);
   }
 
   // Open menu (as cabinet)
   openCabinetFunc(value: boolean): void {
-    this.openCabinet = value
+    this.openCabinet = value;
   }
-
 }

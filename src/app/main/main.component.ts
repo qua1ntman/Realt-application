@@ -1,71 +1,30 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Ad } from 'types/ad';
+import { routes } from '../routes';
+import { AppDataService } from './../services/app-data.service';
 
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
-  styleUrls: ['./main.component.css']
+  styleUrls: ['./main.component.css'],
 })
-export class MainComponent{
+export class MainComponent implements OnInit {
+  ads!: Ad[];
+  clickedAd!: boolean;
+  routes = routes.main;
 
-  //data sample
-  ads: Ad[]=[
-    {
-      pic: this.randomColor(),
-      date: new Date(2022, 2, 3).toLocaleDateString(),
-      title: 'penthouse',
-      price: 500000,
-      location: 'Minsk'
-    },
-    {
-      pic: this.randomColor(),
-      date: new Date(2022, 3, 3).toLocaleDateString(),
-      title: 'penthouse',
-      price: 125122,
-      location: 'Minsk'
-    },
-    {
-      pic: this.randomColor(),
-      date: new Date(2022, 1, 6).toLocaleDateString(),
-      title: 'penthouse',
-      price: 1262000,
-      location: 'Minsk'
-    },
-    {
-      pic: this.randomColor(),
-      date: new Date(2022, 1, 4).toLocaleDateString(),
-      title: 'penthouse',
-      price: 255000,
-      location: 'Minsk'
-    },
-    {
-      pic: this.randomColor(),
-      date: new Date(2022, 4, 6).toLocaleDateString(),
-      title: 'penthouse',
-      price: 124000,
-      location: 'Minsk'
-    },
-    {
-      pic: this.randomColor(),
-      date: new Date(2022, 3, 14).toLocaleDateString(),
-      title: 'penthouse',
-      price: 634000,
-      location: 'Minsk'
-    },
-    {
-      pic: this.randomColor(),
-      date: new Date(2022, 3, 22).toLocaleDateString(),
-      title: 'penthouse',
-      price: 445000,
-      location: 'Minsk'
-    },
-  ]
+  constructor(private appDataService: AppDataService) {}
 
-  constructor() { }
-
-  randomColor(): string {
-    return `rgb(${Math.round(Math.random()*255)}, ${Math.round(Math.random()*255)}, ${Math.round(Math.random()*255)})`
+  chosenAdFunc(adId: number): void {
+    this.appDataService.chosenAdData(adId);
+    this.clickedAd = true;
   }
 
+  ngOnInit(): void {
+    this.appDataService.getAdsDataHTTP().subscribe((data) => (this.ads = Object.values(data)));
+  }
 
+  trackByFn(index: any, ad: any) {
+    return index;
+  }
 }
